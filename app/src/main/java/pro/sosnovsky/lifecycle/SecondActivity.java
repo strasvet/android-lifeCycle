@@ -49,12 +49,13 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if(resultCode == RESULT_OK){
             if(requestCode == 333 && data!= null && data.getExtras()!= null){
-                Intent intent = new Intent();
+                /*Intent intent = new Intent();
                 String mail = data.getStringExtra("mail");
                 String phone = data.getStringExtra("phone");
                 intent.putExtra("mail", mail);
                 intent.putExtra("phone", phone);
-                setResult(RESULT_OK, intent);
+                */
+                setResult(RESULT_OK, data);
                 finish();
             }
         }

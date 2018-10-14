@@ -31,16 +31,17 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btn_back_third) {
-            Intent intent = new Intent();
+            /*ne nuzen intent..po umolchaniu l finish = canceled*/
+ /*           Intent intent = new Intent();
             intent.putExtra("second", "cancelled from window 3");
-            setResult(RESULT_CANCELED, intent);
+            setResult(RESULT_CANCELED, intent);*/
             finish();
         }
         if (v.getId() == R.id.btn_ok_third) {
             Intent intent = new Intent();
             /**/
             intent.putExtra("phone", String.valueOf(edit.getText()));
-            intent.putExtra("mail", mail);
+            intent.putExtra("mail", mail);//proverit na null
             setResult(RESULT_OK, intent);
             finish();
         }
